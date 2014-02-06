@@ -4,7 +4,6 @@ MAINTAINER Noah Isaacson noah@nisaacson.com
 # Update the APT cache
 RUN sed -i.bak 's/main$/main universe/' /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get upgrade -y
 
 # Install and setup project dependencies
 RUN apt-get install -y curl lsb-release supervisor openssh-server build-essential
